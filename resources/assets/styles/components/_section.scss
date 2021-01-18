@@ -8,10 +8,6 @@
     padding: gutter(5) 0;
   }
 
-  @include media("<md") {
-    padding: gutter(3) 0;
-  }
-
   &--center {
     text-align: center;
   }

@@ -3,13 +3,27 @@
 
   &__info {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: gutter(8);
+
+    @include media("<md") {
+      margin-bottom: gutter(5);
+    }
 
     &-content {
       width: 50%;
       padding-right: gutter(10);
       text-align: center;
+
+      @include media("<lg") {
+        width: 60%;
+      }
+
+      @include media("<md") {
+        width: 100%;
+        padding: 0;
+      }
     }
 
     &-desc {
@@ -18,7 +32,18 @@
 
     &-image {
       width: 50%;
-      height: gutter(40);
+      height: gutter(48);
+
+      @include media("<lg") {
+        width: 40%;
+      }
+
+      @include media("<md") {
+        width: 100%;
+        height: gutter(30);
+        margin-top: gutter(4);
+        display: none;
+      }
 
       img {
         width: 100%;
@@ -35,10 +60,22 @@
   &__slider {
     padding: 0 gutter(8);
 
+    @include media("<md") {
+      padding: 0 gutter(5);
+    }
+
     &-cell {
       width: 33.33%;
       height: gutter(30);
       padding: 0 gutter(2);
+
+      @include media("<lg") {
+        width: 50%;
+      }
+
+      @include media("<md") {
+        width: 100%;
+      }
     }
   }
 
@@ -96,6 +133,10 @@
       justify-content: center;
       opacity: 0;
       transition: $transition;
+
+      @include media("<md") {
+        opacity: 1;
+      }
     }
 
     &-title {
@@ -104,6 +145,10 @@
       font-size: 24px;
       padding: 0 gutter(1.5) gutter(0.5);
       text-align: center;
+
+      @include media("<md") {
+        font-size: 21px;
+      }
     }
 
     &-button {

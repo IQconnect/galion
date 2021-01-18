@@ -38,6 +38,14 @@
     left: 0;
   }
 
+  @include media("<lg") {
+    font-size: 34px;
+  }
+
+  @include media("<md") {
+    font-size: 30px;
+  }
+
   @extend %text;
 
   &--center {
@@ -111,6 +119,10 @@
   letter-spacing: 0;
   line-height: 26px;
   font-size: 16px;
+
+  @include media("<md") {
+    font-size: 15px;
+  }
 
   @extend %text;
 
