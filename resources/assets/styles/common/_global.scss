@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: $font-main;
+  font-weight: $regular;
+  color: $black;
+  font-size: 16px;
+}
+
+p {
+  margin: 0;
+  font-family: $font-main;
+}
+
+strong {
+  font-weight: $bold !important;
+}

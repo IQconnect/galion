@@ -1,0 +1,13 @@
+//Flexy Breadcrumb
+
+.fbc-items {
+  margin: gutter(2) 0 !important;
+
+  li:first-of-type {
+    padding-left: 2px !important;
+  }
+
+  i {
+    margin-right: 2px !important;
+  }
+}

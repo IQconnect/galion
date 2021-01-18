@@ -1,0 +1,41 @@
+.slider {
+  width: 100%;
+  position: relative;
+  color: $black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  z-index: -2;
+  margin: gutter(8) auto;
+
+  &__icon {
+    position: absolute;
+    font-size: gutter(8);
+    top: - gutter(6);
+    left: gutter(18);
+    color: $bg;
+    z-index: -1;
+  }
+
+  &__content {
+    position: relative;
+    color: $black;
+    margin: auto;
+    text-align: center;
+    max-width: gutter(66);
+    z-index: 900;
+
+    @include media("<=md") {
+      width: 100%;
+    }
+  }
+
+  &__quotation {
+    font-style: italic;
+  }
+
+  &__author {
+    margin-top: gutter(5);
+  }
+}

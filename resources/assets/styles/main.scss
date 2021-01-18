@@ -1,0 +1,40 @@
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap&subset=latin-ext");
+
+// @import library;
+@import "~normalize.css/normalize.css";
+@import "~@animated-burgers/burger-slip/dist/styles.css";
+@import "node_modules/include-media/dist/include-media.scss";
+@import "~flickity/css/flickity.css";
+@import "vendors/scss-lock/css-lock";
+
+//common
+@import "common/functions";
+@import "common/variables";
+@import "common/animations";
+@import "common/mixins";
+@import "common/helpers";
+@import "common/global";
+@import "common/typography";
+@import "common/plugins";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+
+// components
+@import "./components/**/*";
+@import "./components/block-info";
+@import "./components/block-header";
+@import "./components/content";
+
+// builder
+@import "./builder/**/*";
+
+// layouts
+@import "./layouts/**/*";
+
+// Pages
+@import "./pages/**/*";
+
+// Partials
+@import "./partials/**/*";

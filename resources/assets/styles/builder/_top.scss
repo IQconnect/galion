@@ -1,0 +1,80 @@
+.top {
+  $root: &;
+
+  display: grid;
+  grid-template-columns: 55% auto;
+  grid-template-rows: gutter(27) gutter(27);
+  margin-top: gutter(3);
+
+  @include media("<lg") {
+    grid-template-rows: gutter(22) gutter(22);
+  }
+
+  @include media("<md") {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    margin-top: gutter(4);
+  }
+
+  &__box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    @include media ("<md") {
+      height: gutter(22);
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+
+      #{$root}__bar {
+        transform: translateY(0);
+      }
+    }
+
+    @include media(">md") {
+      &:first-of-type {
+        grid-row: 1 / 3;
+      }
+    }
+
+    &:nth-child(2) {
+      #{$root}__bar {
+        background-color: lighten($secondary3, 12);
+      }
+    }
+
+    &:nth-child(3) {
+      #{$root}__bar {
+        background-color: lighten($secondary, 12);
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: $transition * 2;
+  }
+
+  &__bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: gutter(2) gutter(4);
+    color: $white;
+    background-color: lighten($secondary2, 12);
+    transform: translateY(100%);
+    transition: $transition;
+
+    @include media("<md") {
+      transform: translate(0);
+      padding: gutter(1.5) gutter(2);
+    }
+  }
+}

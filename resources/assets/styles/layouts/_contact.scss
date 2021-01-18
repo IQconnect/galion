@@ -1,0 +1,25 @@
+.contact {
+  display: grid;
+  grid-template-columns: 45% 55%;
+
+  &__content {
+    padding: gutter(12) gutter(15);
+    max-width: gutter(80);
+  }
+
+  &__subtitle {
+    color: $black;
+    padding: gutter(5) 0;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__map {
+    width: 100%;
+    height: gutter(70);
+    overflow: hidden;
+  }
+}

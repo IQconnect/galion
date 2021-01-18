@@ -1,0 +1,15 @@
+.prices-list {
+  margin-top: gutter(3);
+
+  &__item {
+    margin: gutter(3) 0;
+  }
+
+  &__desc {
+    margin-top: gutter(0.8) !important;
+  }
+
+  br {
+    display: block !important;
+  }
+}

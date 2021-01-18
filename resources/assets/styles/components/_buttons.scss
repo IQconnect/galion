@@ -1,0 +1,158 @@
+.button,
+.wp-block-file a,
+.wp-block-button__link {
+  color: $primary;
+  font-family: $font-main;
+  font-weight: $medium;
+  font-size: 16px;
+  padding: gutter(1.5) gutter(4);
+  display: inline-block;
+  border: 1px solid $primary;
+  border-radius: 0;
+  cursor: pointer;
+  transition: $transition;
+
+  @include media("<md") {
+    padding: gutter(0.9) gutter(2.5);
+
+    &--text {
+      padding: gutter(1.5) gutter(4);
+    }
+  }
+
+  &--icon {
+    background-color: $primary;
+    color: $white;
+    font-size: gutter(2.8);
+    padding: gutter(0.7) gutter(1.5);
+
+    @include media("<md") {
+      font-size: gutter(1.8);
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: lighten($primary, 5);
+    text-decoration: none;
+  }
+
+  &--text {
+    position: relative;
+    color: $white;
+    border: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(100% - 10px);
+      height: 1px;
+      width: calc(100% - 80px);
+      background-color: $white;
+      transition: $transition;
+    }
+
+    &:hover {
+      background: transparent;
+      transform: translateY(-2.5px);
+      color: $black;
+
+      &::after {
+        background-color: $black;
+      }
+    }
+  }
+
+  &--simple {
+    position: relative;
+    color: $primary;
+    border: 0;
+    padding: 0;
+    margin: gutter(2) 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -5px;
+      height: 1px;
+      width: 100%;
+      background-color: $primary;
+      transition: $transition;
+    }
+
+    &:hover {
+      background: transparent;
+      transform: translateY(-2.5px);
+      color: $secondary2;
+
+      &::after {
+        background-color: $secondary2;
+      }
+    }
+  }
+
+  &--text-color {
+    color: $primary;
+    position: relative;
+    border: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(100% - 10px);
+      height: 1px;
+      width: calc(100% - 80px);
+      background-color: $primary;
+    }
+
+    &:hover {
+      background: transparent;
+      color: $secondary2;
+
+      &::after {
+        background-color: $secondary2;
+      }
+    }
+  }
+
+  &--submit {
+    background: transparent;
+  }
+
+  &--light {
+    color: $secondary;
+    background-color: $white;
+    border-color: $white;
+
+    &:hover {
+      background-color: $secondary;
+      color: $white;
+    }
+  }
+
+  &--center {
+    text-align: center;
+    margin: auto;
+  }
+
+  &--info {
+    background-color: $info;
+
+    &:hover {
+      background-color: darken($info, 10);
+    }
+  }
+}

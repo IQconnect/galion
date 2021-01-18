@@ -1,0 +1,23 @@
+.burger {
+  margin-left: gutter(3);
+  font-size: gutter(1.3) !important;
+
+  &:hover {
+    div,
+    div::after,
+    div::before {
+      background-color: $secondary2 !important;
+    }
+  }
+
+  .burger-lines,
+  .burger-lines::after,
+  .burger-lines::before {
+    background-color: $primary !important;
+    transition: $transition !important;
+  }
+}
+
+.burger-slip.open .burger-lines {
+  background-color: transparent !important;
+}

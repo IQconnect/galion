@@ -1,0 +1,53 @@
+@keyframes bar {
+  from {
+    width: 0%;
+  }
+}
+
+@keyframes accordion {
+  0% {
+    max-height: 0;
+  }
+
+  100% {
+    max-height: gutter(100);
+  }
+}
+
+@keyframes icon1 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes icon2 {
+  0% {
+    transform: translateY(0) rotate(90deg);
+  }
+
+  50% {
+    transform: translateY(-40px) rotate(90deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes icon3 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(40px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

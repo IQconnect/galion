@@ -1,0 +1,51 @@
+.is {
+  &-hidden {
+    overflow-y: scroll;
+    position: fixed;
+    width: 100%;
+  }
+
+  &-black {
+    color: $black !important;
+  }
+
+  &-primary {
+    color: $primary !important;
+  }
+
+  &-secondary {
+    color: $secondary !important;
+  }
+
+  &-regular {
+    font-weight: $regular !important;
+  }
+
+  &-medium {
+    font-weight: $medium !important;
+  }
+
+  &-semibold {
+    font-weight: $semi-bold !important;
+  }
+
+  &-bold {
+    font-weight: $bold !important;
+  }
+
+  &-light {
+    color: $white !important;
+  }
+}
+
+.pb {
+  padding-bottom: gutter(0.8) !important;
+
+  &-0 {
+    padding-bottom: 0 !important;
+  }
+
+  &-2 {
+    padding-bottom: gutter(1.6) !important;
+  }
+}

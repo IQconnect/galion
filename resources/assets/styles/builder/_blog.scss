@@ -1,0 +1,94 @@
+.blog {
+  $root: &;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: gutter(4);
+  margin: gutter(5) 0;
+
+  @include media("<md") {
+    grid-template-columns: 1fr;
+  }
+
+  &--all {
+    gap: gutter(6)  gutter(4);
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    color: $black;
+    transition: $transition;
+
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+      transform: translateY(4px);
+
+      #{$root}__cover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: gutter(40);
+
+    @include media("<lg") {
+      height: gutter(30);
+    }
+
+    @include media("<md") {
+      height: gutter(25);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($secondary, 0.8);
+    transition: $transition;
+    opacity: 0;
+  }
+
+  &__icon {
+    display: block;
+    text-align: center;
+    font-size: 80px;
+    color: $white;
+    opacity: 0.8;
+    margin-bottom: gutter(0.5);
+
+    @include media("<md") {
+      font-size: 50px;
+    }
+  }
+
+  &__tags {
+    display: block;
+    font-weight: $bold;
+    color: $secondary;
+    padding: gutter(1.5) 0 gutter(0.5);
+  }
+
+  &__title {
+    padding-bottom: gutter(1.8);
+    font-size: 25px;
+    line-height: 30px;
+    transition: $transition;
+  }
+}

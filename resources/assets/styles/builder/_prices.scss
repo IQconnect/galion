@@ -1,0 +1,22 @@
+.prices {
+  &__models {
+    margin: gutter(5) 0;
+  }
+
+  &__table {
+    margin-top: gutter(7);
+
+    @include media("<md") {
+      display: none;
+    }
+  }
+
+  &__list {
+    margin: gutter(3) auto gutter(4);
+    display: none;
+
+    @include media("<md") {
+      display: block;
+    }
+  }
+}

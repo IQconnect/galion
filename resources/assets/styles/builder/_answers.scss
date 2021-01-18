@@ -1,0 +1,70 @@
+.answers {
+  $root: &;
+
+  display: grid;
+  grid-template-columns: 55% 45%;
+
+  @include media("<md") {
+    grid-template-columns: 1fr;
+    gap: gutter(4);
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 38px;
+    max-width: gutter(65);
+    padding-right: gutter(5);
+    display: block;
+
+    @include media("<md") {
+      font-size: 20px;
+      line-height: 28px;
+      max-width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: gutter(2) 0;
+    border-bottom: 1px solid darken($bg, 5);
+    color: $secondary;
+
+    &:hover {
+      text-decoration: none;
+      color: $black;
+      transform: translateX(5px);
+
+      #{$root}__circle {
+        background-color: $black;
+      }
+    }
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+
+  &__circle {
+    width: gutter(4);
+    height: gutter(4);
+    border-radius: 100%;
+    background-color: $secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    font-family: $font-title;
+    font-weight: $semi-bold;
+    font-size: 25px;
+    margin-right: gutter(2);
+    transition: $transition;
+
+    @include media("<md") {
+      width: gutter(3);
+      height: gutter(3);
+      font-size: 20px;
+    }
+  }
+}

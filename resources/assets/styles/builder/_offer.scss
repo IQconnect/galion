@@ -1,0 +1,119 @@
+.offer {
+  padding: gutter(12) gutter(3);
+  box-shadow: inset 0 0 0 gutter(200) rgba($black, 0.9);
+  display: flex;
+  align-items: center;
+  color: $white;
+
+  &__items {
+    width: 60%;
+  }
+
+  &__slider {
+    &-cell {
+      width: 33.33%;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    display: block;
+
+    &-bg {
+      width: 100%;
+      height: gutter(50);
+      position: relative;
+      background-color: $black;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.6;
+        transition: $transition;
+      }
+    }
+
+    &-number {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: block;
+      text-align: center;
+      color: $white;
+      transition: $transition;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &-bar {
+      background-color: $gray-dark;
+      padding: gutter(2.5) gutter(1);
+      text-align: center;
+      color: $white;
+      font-size: 20px;
+      font-weight: $regular;
+      transition: $transition;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      .offer__item-bg img {
+        opacity: 0.2;
+      }
+
+      .offer__item-bar {
+        background-color: $primary;
+      }
+
+      .offer__item-number {
+        bottom: 20px;
+      }
+    }
+  }
+
+  &__content {
+    width: 40%;
+    padding: 0 gutter(3) 0 gutter(12);
+  }
+
+  &__subtitle {
+    padding: gutter(5) 0 gutter(3);
+    position: relative;
+  }
+
+  &__arrows {
+    position: absolute;
+    top: 0;
+    right: 60px;
+  }
+
+  &__prev,
+  &__next {
+    margin: 0 gutter(1.5);
+    color: $primary;
+
+    i {
+      font-size: 50px;
+      transform: scaleY(0.8);
+      transition: transform $transition;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $white;
+
+      i {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  &__desc {
+    opacity: 0.8;
+    font-weight: $light;
+  }
+}

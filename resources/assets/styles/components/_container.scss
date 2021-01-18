@@ -1,0 +1,75 @@
+.container {
+  position: relative;
+  max-width: $container+px;
+  padding: 0 gutter(2);
+  margin: auto;
+
+  &--small {
+    max-width: gutter(120);
+    padding: 0 gutter(2);
+    margin: auto;
+  }
+
+  &--medium {
+    max-width: 1400px;
+    padding: 0 gutter(2);
+    margin: auto;
+  }
+
+  &-fluid {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  &__icon1 {
+    @include cssLock("font-size", $container, 1920, (80, 130));
+    @include cssLock("margin-left", $container, 1920, (-80, -280));
+
+    position: absolute;
+    color: $secondary4;
+    //font-size: 130px;
+    top: 200px;
+    //margin-left: - gutter(28);
+    animation: icon1 20s linear infinite;
+
+    @include media("<1400px") {
+      display: none;
+    }
+  }
+
+  &__icon2 {
+    @include cssLock("font-size", $container, 1920, (70, 200));
+    @include cssLock("margin-right", $container, 1920, (-80, -300));
+    @include cssLock("top", $container, 1920, (80, 50));
+
+    position: absolute;
+    color: $secondary;
+    //font-size: 200px;
+    top: 50px;
+    right: 0;
+    //margin-right: - gutter(30);
+    animation: icon2 7s infinite;
+
+    @include media("<1400px") {
+      display: none;
+    }
+  }
+
+  &__icon3 {
+    @include cssLock("font-size", $container, 1920, (100, 320));
+    @include cssLock("margin-right", $container, 1920, (-80, -330));
+
+    position: absolute;
+    color: $secondary3;
+    //font-size: 320px;
+    top: 250px;
+    right: 0;
+    //margin-right: - gutter(33);
+    animation: icon3 7s infinite;
+
+    @include media("<1400px") {
+      display: none;
+    }
+  }
+}

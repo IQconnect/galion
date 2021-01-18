@@ -1,0 +1,132 @@
+/**
+ * WordPress Generated Classes
+ * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+ */
+
+/** Media alignment */
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.aligncenter {
+  display: block;
+  margin: ($gutter / 2) auto;
+  height: auto;
+}
+
+.alignleft,
+.alignright {
+  margin-bottom: ($gutter / 2);
+  height: auto;
+}
+
+@include media("<=sm") {
+  .alignleft {
+    float: left;
+    margin-right: ($gutter / 2);
+  }
+
+  .alignright {
+    float: right;
+    margin-left: ($gutter / 2);
+  }
+}
+
+/** Captions */
+// .wp-caption {
+//   @extend .figure;
+// }
+
+// .wp-caption img {
+//   @extend .figure-img;
+//   @extend .img-fluid;
+// }
+
+// .wp-caption-text {
+//   @extend .figure-caption;
+// }
+
+/** Text meant only for screen readers */
+// .screen-reader-text {
+//   @extend .sr-only;
+//   @extend .sr-only-focusable;
+// }
+
+.main {
+  margin-top: 120px;
+  min-height: calc(100vh - 407px);
+}
+
+.menu-right-container {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+
+  @include media("<lg") {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.menu-left-container {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+
+  @include media("<lg") {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.wp-block-table {
+  margin-top: gutter(8);
+
+  table {
+    max-width: gutter(110);
+    margin: auto;
+  }
+
+  th {
+    color: $primary;
+    padding: gutter(1.5) gutter(0.5);
+  }
+
+  tr {
+    border-bottom: 1px solid $primary;
+  }
+
+  td {
+    padding: gutter(1.5) gutter(0.5);
+  }
+}
+
+.search {
+  article {
+    margin: gutter(4) 0;
+  }
+}
+
+.social-rocket-buttons-heading {
+  margin-top: gutter(4);
+  padding-bottom: gutter(1);
+
+  &::after {
+    content: "\f064";
+    font-family: $font-awesome;
+    margin-left: gutter(1.2);
+  }
+}
+
+.fbc-page .fbc-wrap .fbc-items li a:last-child {
+  margin-right: 0 !important;
+}
+
+.wp-block-image {
+  img {
+    height: 100% !important;
+  }
+}

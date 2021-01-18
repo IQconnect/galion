@@ -1,0 +1,82 @@
+.newsletter {
+  position: relative;
+  background-color: $primary;
+  height: gutter(35);
+
+  &__bg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+  }
+
+  &__content {
+    @include centerX;
+
+    top: - gutter(10);
+    background-color: $white;
+    width: 100%;
+    max-width: gutter(120);
+    box-shadow: $shadow;
+    padding: gutter(2) gutter(3) gutter(6);
+    text-align: center;
+  }
+
+  &__title {
+    color: $primary;
+    text-transform: none;
+    font-family: $font-title;
+    font-weight: $regular;
+    font-size: 45px;
+    margin-bottom: gutter(2);
+  }
+
+  &__text {
+    opacity: 0.3;
+    font-weight: $medium;
+    padding-bottom: gutter(4);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__input {
+    padding: gutter(1.5) gutter(2.5);
+    border-radius: 0;
+    border: 1px solid $gray;
+    width: 100%;
+    max-width: gutter(30);
+
+    &:focus {
+      outline: 0;
+    }
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+
+  &__button {
+    background-color: $primary;
+    padding: gutter(1.5);
+    border: 0;
+    cursor: pointer;
+    transition: $transition;
+
+    &:focus {
+      outline: 0;
+    }
+
+    i {
+      color: $white;
+      font-size: 20px;
+    }
+
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+}

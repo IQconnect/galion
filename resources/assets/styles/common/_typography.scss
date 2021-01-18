@@ -1,0 +1,143 @@
+%text {
+  margin: 0;
+  padding: 0;
+
+  @include media("<md") {
+    br {
+      display: none;
+    }
+  }
+}
+
+.headline {
+  @include cssLock("font-size", 360, $container, (26, 36));
+
+  font-family: $font-title;
+  font-weight: $bold;
+  display: block;
+
+  @extend %text;
+}
+
+.title {
+  position: relative;
+  font-size: 40px;
+  font-family: $font-title;
+  font-weight: $regular;
+  text-transform: uppercase;
+  display: block;
+  padding-bottom: gutter(2.5);
+
+  &::after {
+    content: "";
+    width: gutter(10);
+    height: 1px;
+    background-color: $primary;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  @extend %text;
+
+  &--center {
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &--medium {
+    @include cssLock("font-size", 360, $container, (20, 25));
+
+    font-weight: $semi-bold;
+    line-height: 1.5em;
+  }
+
+  &--smedium {
+    @include cssLock("font-size", 360, $container, (20, 24));
+  }
+
+  &--small {
+    @include cssLock("font-size", 360, $container, (16, 17.5));
+
+    font-weight: $semi-bold;
+    line-height: 1.5em;
+  }
+}
+
+.prefix {
+  @include cssLock("font-size", 360, $container, (17, 18));
+
+  color: $primary;
+  font-family: $font-title;
+  font-weight: $semi-bold;
+  text-transform: uppercase;
+  display: flex;
+  padding-bottom: gutter(1.5);
+  align-items: center;
+
+  @extend %text;
+
+  &--center {
+    justify-content: center;
+    margin-right: gutter(1.5);
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: gutter(2);
+    background-color: $primary;
+    margin-right: gutter(1.5);
+  }
+}
+
+.subtitle {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: $font-title;
+  font-weight: $regular;
+  display: block;
+  padding: gutter(2) 0;
+
+  @extend %text;
+}
+
+.text {
+  font-family: $font-main;
+  font-weight: $light;
+  letter-spacing: 0;
+  line-height: 26px;
+  font-size: 16px;
+
+  @extend %text;
+
+  p {
+    margin: gutter(1.5) 0;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--medium {
+    font-size: 21px;
+    line-height: 30px;
+  }
+
+  &--small {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.sign {
+  font-family: $font-sign;
+  font-weight: $regular;
+  font-size: 27px;
+  display: block;
+  margin-top: gutter(3);
+  margin-left: 58%;
+}

@@ -1,0 +1,63 @@
+// colors
+$primary: #cfa166;
+$secondary: #262223;
+$secondary2: #f768ab;
+$secondary3: #e5ad1b;
+$secondary4: #8d71e2;
+$bg: #f6f6f6;
+$info: #ff1f00;
+$secondary-light: #9e9d9d;
+$primary-light: #61ce4e;
+$primary-dark: #51b340;
+$bg-dark: #eee;
+$light: #e9e9e9;
+$dark: #000;
+$gray-light: #f6f6f6;
+$gray-dark: #505050;
+$gray: rgb(194, 194, 194);
+$white: #fff;
+$black: #000;
+$black-light: #262223;
+
+// font weight
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$bold-black: 900;
+
+// font family
+$font-main: "Poppins", sans-serif;
+$font-title: "Times New Roman", serif;
+$font-sign: "Poppins", cursive;
+$font-awesome: "Font Awesome 5 Free";
+
+// media
+$breakpoints: (
+  "xs": 420px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 1000px,
+  "xl": 1200px
+);
+
+// gutter
+$gutter: 10px;
+
+// width
+$container: 1550;
+
+// shadow
+$shadow: 3px 7px 31px rgba($black, 0.15);
+
+// border
+$line: 1px solid rgba($white, 0.2);
+$line-dark: 1px solid rgba($black, 0.2);
+
+// animation
+$transition: 0.4s;
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;

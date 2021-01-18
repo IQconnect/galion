@@ -1,0 +1,62 @@
+.footer {
+  background-color: $secondary;
+  color: $white;
+
+  &__content {
+    max-width: gutter(120);
+    text-align: center;
+    margin: auto;
+    padding: gutter(5) gutter(1.5);
+  }
+
+  &__logo {
+    margin-bottom: gutter(4);
+    display: block;
+
+    img {
+      width: gutter(35);
+      height: auto;
+    }
+  }
+
+  &__hr {
+    border-width: 1px;
+    border-color: rgba($white, 0.2);
+    border-bottom: 0;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: gutter(1);
+  }
+
+  &__copyright {
+    color: rgba($white, 0.8);
+    font-weight: $light;
+    font-size: 15px;
+  }
+
+  &__nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+
+    li {
+      padding: 0 gutter(0.5);
+
+      a {
+        color: $white;
+        font-weight: $regular;
+        font-size: 15px;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

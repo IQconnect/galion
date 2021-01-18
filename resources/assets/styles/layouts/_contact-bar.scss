@@ -1,0 +1,58 @@
+.contact-bar {
+  background-color: $secondary;
+  padding-top: gutter(8);
+  padding-bottom: gutter(8);
+  color: $white;
+
+  @include media("<md") {
+    padding: gutter(6) gutter(3);
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media("<md") {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-weight: $semi-bold;
+  }
+
+  &__buttons {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+
+    @include media("<md") {
+      margin-top: gutter(2.5);
+    }
+
+    a {
+      margin-left: gutter(1);
+    }
+  }
+
+  &__icon {
+    font-size: 20px;
+    padding: 13px 20px;
+    transition: $transition;
+    background-color: $white;
+    color: $secondary;
+    border: 1px solid $white;
+
+    @include media("<md") {
+      padding: 8px 12px;
+      font-size: 18px;
+    }
+
+    &:hover {
+      background-color: $secondary;
+      color: $white;
+      transform: translateY(-5px);
+    }
+  }
+}

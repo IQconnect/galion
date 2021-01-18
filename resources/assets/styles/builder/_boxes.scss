@@ -1,0 +1,98 @@
+.boxes {
+  $root: &;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: gutter(2.5);
+  margin: gutter(2) auto;
+  max-width: gutter(100);
+  color: $black;
+
+  @include media("<md") {
+    grid-template-columns: repeat(2, 1fr);
+    gap: gutter(1);
+  }
+
+  @include media("<=xs") {
+    grid-template-columns: 1fr;
+    gap: gutter(1);
+  }
+
+  &__item {
+    padding: gutter(8) gutter(3);
+    background-color: $bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    transition: $transition;
+    height: gutter(28);
+
+    @include media("<1000px") {
+      padding: gutter(8) gutter(3);
+    }
+
+    @include media("<md") {
+      padding: gutter(2.5);
+      min-height: gutter(25);
+
+      br {
+        display: none;
+      }
+    }
+
+    @include media("<=xs") {
+      padding: gutter(1);
+      min-height: gutter(18);
+      max-height: gutter(18);
+
+      br {
+        display: none;
+      }
+    }
+
+    &:hover {
+      background-color: $black !important;
+      color: $white !important;
+      text-decoration: none;
+      transform: translateY(4px);
+    }
+
+    &:nth-child(2) {
+      background: $secondary;
+      color: $white;
+    }
+
+    &:nth-child(3) {
+      @include media("<md") {
+        background-color: $secondary2;
+        color: $white;
+      }
+
+      @include media("<=xs") {
+        background-color: $bg;
+        color: $black;
+      }
+    }
+
+    &:nth-child(4) {
+      background: $secondary2;
+      color: $white;
+
+      @include media("<md") {
+        background-color: $bg;
+        color: $black;
+      }
+
+      @include media("<=xs") {
+        background-color: $secondary2;
+        color: $white;
+      }
+    }
+
+    &:nth-child(6) {
+      background: $secondary4;
+      color: $white;
+    }
+  }
+}

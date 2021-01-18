@@ -1,0 +1,77 @@
+.team {
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: $black;
+    overflow: hidden;
+
+    @include media("<lg") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: gutter(45);
+    overflow: hidden;
+
+    @include media("<xl") {
+      height: gutter(35);
+    }
+
+    @include media("<lg") {
+      height: gutter(40);
+
+      &:last-of-type {
+        display: none;
+      }
+    }
+
+    @include media("<md") {
+      height: gutter(24);
+    }
+
+    img {
+      width: 100%;
+      height: calc(100% + 10px);
+      object-fit: cover;
+      object-position: center top;
+      transition: $transition;
+
+      &:hover {
+        opacity: 0.9;
+        object-position: center -10px;
+      }
+    }
+  }
+
+  &__content {
+    margin-top: gutter(8);
+  }
+
+  &__text {
+    padding: gutter(4) 0;
+  }
+
+  &__boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: gutter(2);
+    max-width: gutter(120);
+    margin: gutter(2) 0;
+
+    @include media("<md") {
+      grid-template-columns: 1fr;
+      gap: gutter(1);
+    }
+  }
+
+  &__box {
+    background-color: $bg;
+    padding: gutter(3) gutter(4);
+
+    @include media("<md") {
+      padding: gutter(2);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+a,
+.link {
+  color: $primary;
+  font-weight: $semi-bold;
+  text-decoration: none;
+  transition: $transition;
+
+  &--arrows {
+    text-decoration: none;
+    color: $primary;
+
+    &::before {
+      content: ">>";
+      font-family: $font-title;
+      letter-spacing: -4px;
+      margin-right: 4px;
+      color: $primary;
+      transition: $transition;
+    }
+
+    &:hover {
+      text-decoration: none !important;
+
+      &::before {
+        color: $secondary2;
+      }
+    }
+  }
+
+  &:hover {
+    text-decoration: underline;
+    color: $secondary2;
+  }
+}

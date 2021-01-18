@@ -1,0 +1,111 @@
+.form {
+  $root: &;
+
+  text-align: left;
+  margin: gutter(2) auto gutter(4);
+  max-width: gutter(70);
+  color: rgba($black-light, 0.8);
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: gutter(6);
+
+    @include media("<md") {
+      gap: gutter(3);
+    }
+  }
+
+  &__field {
+    margin: gutter(2) 0;
+
+    &--checkbox {
+      display: block;
+      position: relative;
+      margin: gutter(4) 0;
+      padding-left: gutter(6);
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    margin-bottom: gutter(6) !important;
+  }
+
+  &__input {
+    background: none;
+    outline: 0;
+    border: 0;
+    width: 100%;
+    padding: gutter(1) 0;
+    border-bottom: 2px solid rgba($primary, 0.5);
+    line-height: 14px;
+
+    &::placeholder {
+      opacity: 0.8;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &-desc {
+      font-size: 13px;
+      letter-spacing: -0.35px;
+      margin-top: -4px;
+      display: inline-block;
+      line-height: 22px;
+
+      @include media("<md") {
+        font-size: 11px;
+        line-height: 20px;
+      }
+    }
+
+    &:checked ~ #{$root}__check::after {
+      display: block;
+    }
+  }
+
+  &__check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: gutter(3);
+    width: gutter(3);
+    border: 2px solid $primary;
+
+    @include media("<md") {
+      height: gutter(2.5);
+      width: gutter(2.5);
+
+      &::after {
+        width: 5px !important;
+        height: 8px !important;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 50%;
+      top: 40%;
+      width: 8px;
+      height: 12px;
+      border: solid $primary;
+      border-width: 0 3px 3px 0;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+
+  &__button {
+    margin-top: gutter(5);
+  }
+}

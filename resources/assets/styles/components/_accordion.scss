@@ -1,0 +1,60 @@
+.accordion {
+  margin: gutter(2) auto;
+  overflow: hidden;
+  background-color: $white;
+
+  &__header {
+    position: relative;
+    border: 1px solid $secondary;
+    padding: gutter(2);
+    cursor: pointer;
+    transition: $transition;
+    z-index: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span,
+    h3 {
+      transition: 0.1s;
+      font-size: 1.1em;
+    }
+
+    &:hover {
+      background-color: $secondary;
+
+      span {
+        color: $white !important;
+      }
+    }
+  }
+
+  &__arrow {
+    transform: rotate(180deg);
+    font-size: 30px;
+    display: block;
+    transition: 0.2s;
+    height: gutter(1.5);
+    padding-top: 0;
+
+    &--active {
+      transform: rotate(0);
+    }
+  }
+
+  &__content {
+    background-color: $bg;
+    border: 1px solid $bg;
+    overflow: hidden;
+    max-height: 0;
+
+    &--active {
+      max-height: gutter(100);
+      animation: accordion 1s ease-in;
+    }
+  }
+
+  &__text {
+    padding: gutter(1) gutter(2) gutter(3);
+  }
+}

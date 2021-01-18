@@ -1,0 +1,137 @@
+.chart {
+  $root: &;
+
+  display: flex;
+
+  @include media("<md") {
+    flex-direction: column-reverse;
+  }
+
+  &__image {
+    width: 35%;
+    height: gutter(60);
+
+    @include media("<md") {
+      width: 100%;
+      max-width: gutter(30);
+      height: gutter(35);
+      margin: gutter(6) auto 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  &__content {
+    width: 75%;
+
+    @include media("<md") {
+      width: 100%;
+    }
+  }
+
+  &__desc {
+    padding: gutter(4) gutter(6) gutter(6);
+
+    @include media("<md") {
+      padding: gutter(6) 0;
+    }
+  }
+
+  &__panel {
+    width: calc(100% + gutter(8));
+    background-color: #253042;
+    margin-left: - gutter(8);
+    padding: gutter(4) gutter(6);
+
+    @include media("<md") {
+      padding: gutter(1.5) gutter(3);
+      margin-left: 0;
+    }
+  }
+
+  &__item {
+    padding: gutter(2.2) 0;
+
+    &:nth-child(2) {
+      #{$root}__bar-color {
+        background-color: $secondary2;
+      }
+    }
+
+    &:nth-child(3) {
+      #{$root}__bar-color {
+        background-color: $secondary;
+      }
+    }
+
+    &:nth-child(4) {
+      #{$root}__bar-color {
+        background-color: $secondary3;
+      }
+    }
+  }
+
+  &__info {
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: gutter(1.5);
+
+    @include media("<md") {
+      span {
+        padding-left: gutter(2);
+      }
+    }
+  }
+
+  &__bar {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background: rgba($white, 0.15);
+    border-radius: 5px;
+    overflow: hidden;
+
+    &-animation {
+      animation: bar 4s;
+    }
+
+    &-color {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: $secondary4;
+    }
+
+    &-color2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: $secondary2;
+    }
+
+    &-color3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: $secondary;
+    }
+
+    &-color4 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: $secondary3;
+    }
+  }
+}
