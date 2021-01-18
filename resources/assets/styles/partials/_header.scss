@@ -49,7 +49,7 @@
       }
     }
 
-    @include media("<lg") {
+    @include media("<1600px") {
       display: none;
     }
 
@@ -57,12 +57,12 @@
       display: none;
       padding-left: gutter(1.5);
 
+      img {
+        height: gutter(4) !important;
+      }
+
       @include media("<1600px") {
         display: block;
-
-        img {
-          height: gutter(4);
-        }
       }
     }
   }
@@ -70,7 +70,6 @@
   &__hamburger {
     position: absolute;
     right: 30px;
-    top: gutter(3.5);
     z-index: 40;
 
     @include media(">1600px") {
@@ -126,7 +125,7 @@
       position: relative;
       margin: 0 gutter(0.5);
 
-      @include media(">=lg") {
+      @include media(">1600px") {
         padding: 0;
 
         // &:first-child {
@@ -142,7 +141,7 @@
         color: $white;
         text-decoration: underline;
 
-        @include media(">=lg") {
+        @include media(">1600px") {
           .sub-menu {
             display: block;
           }
@@ -156,7 +155,7 @@
         white-space: nowrap;
         //opacity: 0;
 
-        @include media("<lg") {
+        @include media("<1600px") {
           color: $white;
         }
 
@@ -165,7 +164,7 @@
           opacity: 1;
         }
 
-        @include media(">=lg") {
+        @include media(">=1600px") {
           padding: gutter(0.8);
           //opacity: 1;
         }
@@ -188,7 +187,7 @@
           opacity: 1;
         }
 
-        @include media(">=lg") {
+        @include media(">=1600px") {
           color: $primary;
           text-decoration: none;
 
@@ -233,7 +232,7 @@
     margin: 0;
     padding: 0;
 
-    @include media(">=lg") {
+    @include media(">=1600px") {
       flex-direction: row;
     }
   }
