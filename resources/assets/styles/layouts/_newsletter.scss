@@ -3,6 +3,10 @@
   background-color: $primary;
   height: gutter(35);
 
+  @include media("<md") {
+    height: gutter(24);
+  }
+
   &__bg {
     height: 100%;
     width: 100%;
@@ -20,6 +24,11 @@
     box-shadow: $shadow;
     padding: gutter(2) gutter(3) gutter(6);
     text-align: center;
+
+    @include media("<md") {
+      padding: gutter(1) gutter(1.5) gutter(5);
+      top: - gutter(5);
+    }
   }
 
   &__title {
@@ -29,6 +38,10 @@
     font-weight: $regular;
     font-size: 45px;
     margin-bottom: gutter(2);
+
+    @include media("<md") {
+      font-size: 35px;
+    }
   }
 
   &__text {

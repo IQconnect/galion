@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
 
-  @include media("<md") {
-    br {
-      display: none;
-    }
-  }
+  // @include media("<md") {
+  //   br {
+  //     display: none;
+  //   }
+  // }
 }
 
 .headline {
@@ -111,6 +111,11 @@
   padding: gutter(2) 0;
 
   @extend %text;
+
+  @include media("<md") {
+    font-size: 22px;
+    padding: gutter(1.5) 0;
+  }
 }
 
 .text {

@@ -2,24 +2,51 @@
   display: grid;
   grid-template-columns: 45% 55%;
 
+  @include media("<md") {
+    grid-template-columns: auto;
+  }
+
   &__content {
     padding: gutter(12) gutter(15);
     max-width: gutter(80);
+
+    @include media("<md") {
+      padding: gutter(6) gutter(3);
+    }
   }
 
   &__subtitle {
     color: $black;
     padding: gutter(5) 0;
+
+    @include media("<md") {
+      padding: gutter(4) 0 gutter(3);
+    }
   }
 
   &__row {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+
+    @include media("<md") {
+      flex-direction: column;
+    }
+  }
+
+  &__data {
+    @include media("<md") {
+      margin-top: gutter(1);
+    }
   }
 
   &__map {
     width: 100%;
     height: gutter(70);
     overflow: hidden;
+
+    @include media("<md") {
+      height: gutter(50);
+    }
   }
 }

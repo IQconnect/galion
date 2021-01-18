@@ -7,6 +7,10 @@
     text-align: center;
     margin: auto;
     padding: gutter(5) gutter(1.5);
+
+    @include media("<md") {
+      padding: gutter(3) gutter(1.5);
+    }
   }
 
   &__logo {
@@ -16,6 +20,10 @@
     img {
       width: gutter(35);
       height: auto;
+
+      @include media("<md") {
+        width: gutter(25);
+      }
     }
   }
 
@@ -28,6 +36,7 @@
   &__row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     padding-top: gutter(1);
   }
@@ -36,6 +45,12 @@
     color: rgba($white, 0.8);
     font-weight: $light;
     font-size: 15px;
+
+    @include media("<md") {
+      width: 100%;
+      order: 1;
+      margin-top: gutter(2);
+    }
   }
 
   &__nav {
@@ -44,6 +59,10 @@
     list-style-type: none;
     display: flex;
     flex-direction: row;
+
+    @include media("<md") {
+      margin: 0 auto;
+    }
 
     li {
       padding: 0 gutter(0.5);
