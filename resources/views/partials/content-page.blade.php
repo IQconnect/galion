@@ -11,7 +11,6 @@
   <section class="section">
     <div class="container">
       <div class="text content-page">
-        {!! do_shortcode('[flexy_breadcrumb]') !!}
         <h1 class="title">
           {{ the_title() }}
         </h1>

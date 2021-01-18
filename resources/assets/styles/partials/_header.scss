@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
 
-  @include media("<lg") {
+  @include media("<1600px") {
     height: gutter(10);
   }
 
@@ -45,7 +45,7 @@
       @include media("<1400px") {
         padding: 0 gutter(2);
         margin-top: gutter(1.2);
-        height: gutter(10);
+        height: gutter(5);
       }
     }
 
@@ -55,15 +55,13 @@
 
     &--left {
       display: none;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      padding-left: gutter(1.5);
 
-      @include media("<lg") {
+      @include media("<1600px") {
         display: block;
 
         img {
-          height: gutter(8);
+          height: gutter(4);
         }
       }
     }
@@ -75,7 +73,7 @@
     top: gutter(3.5);
     z-index: 40;
 
-    @include media(">=lg") {
+    @include media(">1600px") {
       display: none;
     }
   }
@@ -83,7 +81,7 @@
   &__space {
     padding-top: gutter(10);
 
-    @include media(">=lg") {
+    @include media(">1600px") {
       display: none;
     }
   }
@@ -108,7 +106,7 @@
       width: 100%;
     }
 
-    @include media(">=lg") {
+    @include media(">=1600px") {
       position: relative;
       top: 0;
       right: 0;
