@@ -17,7 +17,7 @@
   &__left {
     width: 60%;
 
-    @include media("<md") {
+    @include media("<1100px") {
       width: 100%;
     }
   }
@@ -27,7 +27,11 @@
     height: gutter(80);
     overflow: hidden;
 
-    @include media("<md") {
+    @include media("<1600px") {
+      height: gutter(70);
+    }
+
+    @include media("<1100px") {
       display: none;
     }
   }
@@ -48,7 +52,11 @@
     gap: gutter(0.5);
     padding: 0 gutter(0.5);
 
-    @include media("<md") {
+    @include media("<1100px") {
+      grid-template-columns: repeat(3, auto);
+    }
+
+    @include media("<600px") {
       grid-template-columns: auto auto;
     }
 
@@ -56,7 +64,15 @@
       width: 100%;
       height: gutter(40);
 
-      @include media("<md") {
+      @include media("<1600px") {
+        height: gutter(30);
+      }
+
+      @include media("<1100px") {
+        height: gutter(25);
+      }
+
+      @include media("<600px") {
         height: gutter(20);
 
         &:last-child {
@@ -77,8 +93,12 @@
     max-width: gutter(80);
     min-height: gutter(40);
 
-    @include media("<md") {
-      padding: gutter(1) gutter(1.5) gutter(4);
+    @include media("<1600px") {
+      padding: gutter(2) gutter(4);
+    }
+
+    @include media("<1100px") {
+      padding: gutter(2) gutter(1.5) gutter(4);
       min-height: auto;
     }
   }
@@ -97,7 +117,11 @@
     // right: 60px;
     padding-left: gutter(12);
 
-    @include media("<md") {
+    @include media("<1600px") {
+      padding-left: gutter(3);
+    }
+
+    @include media("<1100px") {
       padding-left: 0;
     }
   }
