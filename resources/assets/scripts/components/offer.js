@@ -11,16 +11,23 @@ const offer = {
       draggable: true,
       autoPlay: 4000,
     });
-    const nextButton = document.querySelector('.offer__next');
-    const prevButton = document.querySelector('.offer__prev');
-    nextButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      offer.next();
-    });
-    prevButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      offer.previous();
-    });
+    const nextButton = document.querySelectorAll('.offer__next');
+    const prevButton = document.querySelectorAll('.offer__prev');
+
+    nextButton.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        offer.next();
+      });
+    }),
+
+    prevButton.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        offer.next();
+      });
+    }),
+
     offer.resize();
   },
 

@@ -99,5 +99,13 @@
     <p class="text offer__desc">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus mattis lectus congue ultrices. Quisque ut ullamcorper quam. Donec quis sapien consequat erat iaculis interdum in eu tortor. Quisque ut ullamcorper quam. Donec quis sapien consequat erat iaculis.
     </p>
+    <div class="offer__arrows--mobile">
+      <a href="#" class="offer__prev">
+        <i class="fas fa-long-arrow-alt-left"></i>
+      </a>
+      <a href="#" class="offer__next">
+        <i class="fas fa-long-arrow-alt-right"></i>
+      </a>
+    </div>
   </div>
 </section>

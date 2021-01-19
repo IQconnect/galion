@@ -13,7 +13,7 @@
   &__items {
     width: 60%;
 
-    @include media("<md") {
+    @include media("<1200px") {
       width: 100%;
     }
   }
@@ -38,8 +38,8 @@
       position: relative;
       background-color: $black;
 
-      @include media("<md") {
-        height: gutter(30);
+      @include media("<1200px") {
+        height: gutter(20);
       }
 
       img {
@@ -74,7 +74,7 @@
       font-weight: $regular;
       transition: $transition;
 
-      @include media("<md") {
+      @include media("<1200px") {
         font-size: 16px;
         padding: gutter(2) gutter(1);
       }
@@ -101,9 +101,22 @@
     width: 40%;
     padding: 0 gutter(3) 0 gutter(12);
 
-    @include media("<md") {
+    @include media("<1700px") {
+      padding: 0 gutter(3) 0 gutter(10);
+    }
+
+    @include media("<1600px") {
+      padding: 0 gutter(1) 0 gutter(8);
+    }
+
+    @include media("<1400px") {
+      padding: 0 gutter(1) 0 gutter(5);
+    }
+
+    @include media("<1200px") {
       width: 100%;
       padding: 0 gutter(0.5) gutter(5);
+      max-width: gutter(80);
       order: -1;
     }
   }
@@ -118,8 +131,18 @@
     top: 0;
     right: 60px;
 
-    @include media("<md") {
+    @include media("<1200px") {
       display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include media("<1200px") {
+        display: block;
+        margin-top: gutter(2);
+        margin-bottom: - gutter(3);
+      }
     }
   }
 
