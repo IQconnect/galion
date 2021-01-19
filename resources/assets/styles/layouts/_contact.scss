@@ -2,7 +2,11 @@
   display: grid;
   grid-template-columns: 45% 55%;
 
-  @include media("<md") {
+  @include media("<1300px") {
+    grid-template-columns: 55% 45%;
+  }
+
+  @include media("<950px") {
     grid-template-columns: auto;
   }
 
@@ -10,7 +14,19 @@
     padding: gutter(12) gutter(15);
     max-width: gutter(80);
 
-    @include media("<md") {
+    @include media("<1800px") {
+      padding: gutter(10) gutter(12);
+    }
+
+    @include media("<1600px") {
+      padding: gutter(10) gutter(8);
+    }
+
+    @include media("<1300px") {
+      padding: gutter(6) gutter(6);
+    }
+
+    @include media("<950px") {
       padding: gutter(6) gutter(3);
     }
   }
@@ -19,7 +35,11 @@
     color: $black;
     padding: gutter(5) 0;
 
-    @include media("<md") {
+    @include media("<1600px") {
+      font-size: 20px;
+    }
+
+    @include media("<950px") {
       padding: gutter(4) 0 gutter(3);
     }
   }
@@ -29,13 +49,13 @@
     justify-content: space-between;
     flex-direction: row;
 
-    @include media("<md") {
+    @include media("<950px") {
       flex-direction: column;
     }
   }
 
   &__data {
-    @include media("<md") {
+    @include media("<950px") {
       margin-top: gutter(1);
     }
   }
@@ -45,7 +65,7 @@
     height: gutter(70);
     overflow: hidden;
 
-    @include media("<md") {
+    @include media("<950px") {
       height: gutter(50);
     }
   }
