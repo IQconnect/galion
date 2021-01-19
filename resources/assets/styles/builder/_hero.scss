@@ -59,9 +59,10 @@
     position: relative;
     //max-width: gutter(60);
     z-index: 2;
+    margin-top: gutter(30);
 
     @include media("<lg") {
-      margin: auto;
+      margin: gutter(20) auto 0;
     }
   }
 

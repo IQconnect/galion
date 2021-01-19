@@ -64,6 +64,10 @@
       margin: 0 auto;
     }
 
+    @include media("<510px") {
+      display: none;
+    }
+
     li {
       padding: 0 gutter(0.5);
 
