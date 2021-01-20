@@ -17,6 +17,7 @@ import offer from './components/offer';
 import course from './components/course';
 import hamburger from './components/hamburger';
 import header from './components/header';
+import submenu from './components/submenu';
 import preloader from './components/preloader';
 import wp_block_gallery from './components/wp-block-gallery';
 import accordion from './components/accordion';
@@ -54,5 +55,6 @@ jQuery(document).ready(() => {
 
 setTimeout(()=>{
   PureCounter;
+  submenu.init();
   window.dispatchEvent(new Event('resize'));
 }, 1000)

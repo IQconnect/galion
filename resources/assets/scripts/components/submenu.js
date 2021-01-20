@@ -1,21 +1,21 @@
 const CONFIG = {
-  TRIGGER: '.menu-item-has-children a',
+  TRIGGER: '.menu-item-has-children > a',
   ELEM: '.sub-menu',
   HREF: '.sub-menu li',
-  CLASS: 'd-block',
+  CLASS: 'is-block',
   ACTIVE: 'current-menu-item',
 };
 
 const submenu = {
   init() {
     const { TRIGGER, ELEM, CLASS, HREF, ACTIVE } = CONFIG;
-    this.$trigger = document.querySelector(TRIGGER);
+    this.$triggers = document.querySelectorAll(TRIGGER);
     this.$elem = document.querySelector(ELEM);
     this.$href = document.querySelectorAll(HREF);
     this.$class = CLASS;
     this.$active = ACTIVE
     this.active(ACTIVE);
-    if(this.$trigger) {
+    if(this.$triggers) {
       this.addEvent();
     }
   },
@@ -27,10 +27,13 @@ const submenu = {
   },
 
   addEvent() {
-    this.$trigger.addEventListener('click', (event) => {
-      event.preventDefault();
-      this.$elem.classList.toggle(this.$class);
-    });
+    this.$triggers.forEach((item) => {
+      item.addEventListener('click', (event) => {
+        event.preventDefault();
+        let elem = item.parentElement.querySelector('.sub-menu');
+        elem.classList.toggle(this.$class);
+      });
+    })
   },
 };
 

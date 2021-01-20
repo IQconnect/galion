@@ -16,17 +16,17 @@
             'theme_location' => 'left',
             'menu_class' => 'header__menu',
           ]) !!}
-      @endif
-      <a class="header__brand col-auto" href="{{ home_url('/') }}">
-        <img src="{{ get_option_field("logo")['url'] }}" alt="{{  get_option_field("logo")['alt'] }}">
-      </a>
+        @endif
+        <a class="header__brand col-auto" href="{{ home_url('/') }}">
+          <img src="{{ get_option_field("logo")['url'] }}" alt="{{  get_option_field("logo")['alt'] }}">
+        </a>
         @if (has_nav_menu('right'))
         {!! wp_nav_menu(
           [
             'theme_location' => 'right',
             'menu_class' => 'header__menu',
           ]) !!}
-      @endif
+        @endif
     </nav>
   </div>
 </header>

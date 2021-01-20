@@ -5,6 +5,10 @@
     width: 100%;
   }
 
+  &-block {
+    display: block !important;
+  }
+
   &-black {
     color: $black !important;
   }

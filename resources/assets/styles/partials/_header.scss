@@ -165,7 +165,7 @@
         }
 
         @include media(">=1600px") {
-          padding: gutter(0.8);
+          padding: gutter(3) gutter(0.8);
           //opacity: 1;
         }
 
