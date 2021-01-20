@@ -1,4 +1,3 @@
-@include("components.hotoffer")
 <section>
   <a href="{{ $data['link']['url'] }}" class="video" data-fancybox="video" target="_blank">
     <img class="video__bg" src="{{ $data['image']['url'] }}" alt="{{ $data['video']['title'] }}" />
@@ -10,6 +9,3 @@
     </div>
   </a>
 </section>
-@include("components.course")
-@include("components.offer")
-@include("components.contact")

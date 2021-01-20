@@ -1,6 +1,7 @@
 .contact {
   display: grid;
   grid-template-columns: 45% 55%;
+  box-shadow: $shadow;
 
   @include media("<1300px") {
     grid-template-columns: 55% 45%;

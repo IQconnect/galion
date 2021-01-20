@@ -3,17 +3,17 @@
     <div class="hotoffer__info">
       <div class="hotoffer__info-content">
         <h2 class="title title--center">
-          Gorące oferty
+          {{ $data['title'] }}
         </h2>
         <p class="text hotoffer__info-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus mattis lectus congue ultrices. Quisque ut ullamcorper quam. Donec quis sapien consequat erat iaculis interdum in eu tortor. Vestibulum tempus lorem orci, et efficitur libero aliquet iaculis.
+          {{ $data['desc'] }}
         </p>
-        <a class="button" href="#">
-          Czytaj więcej
+        <a class="button" href="{{ $data['link']['url'] }}">
+          {{ $data['link']['title'] }}
         </a>
       </div>
       <div class="hotoffer__info-image">
-        <img src="@asset("images/img1.jpg")" alt="Gorące oferty">
+        <img src="{{ $data['image']['url'] }}" alt="{{ $data['title'] }}">
       </div>
     </div>
     <div class="hotoffer__items">
@@ -24,58 +24,21 @@
         <i class="fas fa-long-arrow-alt-right"></i>
       </a>
       <div class="hotoffer__slider">
-        <div class="hotoffer__slider-cell">
-          <a href="#" class="hotoffer__item">
-            <div class="hotoffer__item-cover">
-              <h3 class="hotoffer__item-title">
-                Tygodniowe pobyty zdrowotne
-              </h3>
-              <div class="button hotoffer__item-button">
-                Czytaj więcej
+        @foreach($data['offers'] as $item)
+          <div class="hotoffer__slider-cell">
+            <a href="#" class="hotoffer__item">
+              <div class="hotoffer__item-cover">
+                <h3 class="hotoffer__item-title">
+                  {{ $item['title'] }}
+                </h3>
+                <div class="button hotoffer__item-button">
+                  Czytaj więcej
+                </div>
               </div>
-            </div>
-            <img class="hotoffer__item-bg" src="@asset("images/hot1.jpg")" alt="Gorące oferty" />
-          </a>
-        </div>
-        <div class="hotoffer__slider-cell">
-          <a href="#" class="hotoffer__item">
-            <div class="hotoffer__item-cover">
-              <h3 class="hotoffer__item-title">
-                Turnusy rehabilitacyjne PFRON
-              </h3>
-              <div class="button hotoffer__item-button">
-                Czytaj więcej
-              </div>
-            </div>
-            <img class="hotoffer__item-bg" src="@asset("images/hot2.jpg")" alt="Gorące oferty" />
-          </a>
-        </div>
-        <div class="hotoffer__slider-cell">
-          <a href="#" class="hotoffer__item">
-            <div class="hotoffer__item-cover">
-              <h3 class="hotoffer__item-title">
-                AZS 3 dniowa
-              </h3>
-              <div class="button hotoffer__item-button">
-                Czytaj więcej
-              </div>
-            </div>
-            <img class="hotoffer__item-bg" src="@asset("images/hot3.jpg")" alt="Gorące oferty" />
-          </a>
-        </div>
-        <div class="hotoffer__slider-cell">
-          <a href="#" class="hotoffer__item">
-            <div class="hotoffer__item-cover">
-              <h3 class="hotoffer__item-title">
-                AZS 7 dniowa
-              </h3>
-              <div class="button hotoffer__item-button">
-                Czytaj więcej
-              </div>
-            </div>
-            <img class="hotoffer__item-bg" src="@asset("images/hot4.jpg")" alt="Gorące oferty" />
-          </a>
-        </div>
+              <img class="hotoffer__item-bg" src="{{ $item['image']['url'] }}" alt="{{ $item['title'] }}" />
+            </a>
+          </div>
+        @endforeach
       </div>
     </div>
   </div>

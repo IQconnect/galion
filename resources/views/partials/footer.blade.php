@@ -1,3 +1,6 @@
+@if(get_field('show_contact'))
+  @include("partials.contact")
+@endif
 <footer class="footer">
   <div class="footer__content">
     <a href="#" class="footer__logo">

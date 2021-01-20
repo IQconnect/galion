@@ -10,6 +10,6 @@ $main
     ->setLocation('post_type', '==', 'all');
 
 $main
-    ->addTrueFalse('show_form', ['label'=>'Wyświetl formularz', 'default_value' => 0]);
+    ->addTrueFalse('show_contact', ['label'=>'Wyświetl kontakt', 'default_value' => 0]);
 
 return $main;

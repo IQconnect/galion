@@ -8,7 +8,7 @@
 	</div>
 </section> --}}
 
-  <section class="section">
+  <section class="section section--content">
     <div class="container">
       <div class="text content-page">
         <h1 class="title title--center">
