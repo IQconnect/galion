@@ -1,5 +1,6 @@
 .content-page {
-  margin-top: 0;
+  max-width: gutter(120);
+  margin: 0 auto;
 
   &__main {
     margin-top: gutter(4);

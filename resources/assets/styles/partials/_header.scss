@@ -12,6 +12,7 @@
   background-color: $white;
   display: flex;
   align-items: center;
+  box-shadow: 3px 7px 31px rgba($black, 0.07);
 
   @include media("<1600px") {
     height: gutter(10);
