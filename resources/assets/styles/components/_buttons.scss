@@ -20,6 +20,27 @@
     }
   }
 
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: lighten($primary, 5);
+    text-decoration: none;
+  }
+
+  &--dark {
+    background-color: $secondary;
+    border-color: $secondary;
+    color: $white;
+
+    &:hover {
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+
   &--icon {
     background-color: $primary;
     color: $white;
@@ -29,16 +50,6 @@
     @include media("<md") {
       font-size: gutter(1.8);
     }
-  }
-
-  &:focus {
-    outline: 0;
-  }
-
-  &:hover {
-    color: $white;
-    background-color: lighten($primary, 5);
-    text-decoration: none;
   }
 
   &--text {

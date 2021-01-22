@@ -9,11 +9,12 @@ $builder = new FieldsBuilder('builder');
 $builder
     ->addTab('builder', ['placement' => 'left'])
         ->addFlexibleContent('components', ['button_label' => 'Dodaj komponent'])
-            ->addLayout(get_field_partial('components.hero'))
+            // ->addLayout(get_field_partial('components.hero'))
             ->addLayout(get_field_partial('components.hotoffer'))
             ->addLayout(get_field_partial('components.video'))
             ->addLayout(get_field_partial('components.course'))
             ->addLayout(get_field_partial('components.offer'))
+            ->addLayout(get_field_partial('components.text_img'))
             // ->addLayout(get_field_partial('components.top'))
             // ->addLayout(get_field_partial('components.stats'))
             // ->addLayout(get_field_partial('components.services'))
@@ -26,5 +27,6 @@ $builder
             // ->addLayout(get_field_partial('components.boxes'))
             // ->addLayout(get_field_partial('components.page_contact'))
             ->addLayout('content', ['label' => 'Treść']);
+
 
 return $builder;

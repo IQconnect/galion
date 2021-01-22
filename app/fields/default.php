@@ -4,17 +4,16 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-$page = new FieldsBuilder('page');
+$default = new FieldsBuilder('default');
 
-$page
-    ->setLocation('post_template', '==', 'views/template-custom.blade.php');
+$default
+    ->setLocation('post_template', '==', 'default');
 
-$page
-    ->addFields(get_field_partial('partials.builder'))
+$default
     ->addTab('Hero', ['placement' => 'left'])
         ->addGroup('hero')
             ->addTrueFalse('show_hero', ['label'=>'Wyświetl Hero', 'default_value' => 0])
             ->addFields(get_field_partial('components.hero'))
         ->endGroup('hero');
 
-return $page;
+return $default;
