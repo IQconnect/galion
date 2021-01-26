@@ -14,6 +14,11 @@ $default
         ->addGroup('hero')
             ->addTrueFalse('show_hero', ['label'=>'Wyświetl Hero', 'default_value' => 0])
             ->addFields(get_field_partial('components.hero'))
-        ->endGroup('hero');
+        ->endGroup('hero')
+    ->addTab('Sidebox', ['placement' => 'left'])
+        ->addGroup('sidebox')
+            ->addTrueFalse('show_sidebox', ['label'=>'Wyświetl Sidebox', 'default_value' => 0])
+            ->addFields(get_field_partial('components.sidebox'))
+        ->endGroup('sidebox');
 
 return $default;

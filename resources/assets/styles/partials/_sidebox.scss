@@ -1,0 +1,66 @@
+.sidebox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__content {
+    width: 65%;
+    padding: 0 gutter(4);
+  }
+
+  &__main {
+    width: 35%;
+    padding: gutter(1.8) gutter(4);
+    position: -webkit-sticky;
+    position: sticky;
+    top: gutter(10);
+    height: 100%;
+  }
+
+  &__box {
+    background-color: $black;
+    color: $white;
+    padding: gutter(2) gutter(3) gutter(4);
+    font-size: 18px;
+    box-shadow: $shadow;
+    text-align: left;
+  }
+
+  &__title,
+  h2 {
+    font-family: $font-title;
+    font-size: 35px;
+    color: $primary;
+  }
+
+  &__subtitle,
+  h3 {
+    font-family: $font-main;
+    font-size: 18px;
+    font-weight: $semi-bold;
+    color: $white;
+  }
+
+  &__text {
+    margin: gutter(2) auto;
+  }
+
+  &__list,
+  ul {
+    text-align: left;
+    margin: gutter(2) auto;
+    font-weight: $regular;
+    font-size: 16px;
+
+    li {
+      padding: gutter(0.15) 0;
+    }
+  }
+
+  &__button {
+    margin-top: gutter(2);
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

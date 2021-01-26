@@ -1,43 +1,43 @@
 .content-page {
-  max-width: gutter(120);
+  width: gutter(120);
   margin: 0 auto;
 
-  &__main {
-    margin-top: gutter(4);
+  h1 {
+    margin-bottom: gutter(4);
+  }
 
-    h2 {
-      @include cssLock("font-size", 360, $container, (21, 25));
-      @include cssLock("line-height", 360, $container, (24, 31));
+  h2 {
+    @include cssLock("font-size", 360, $container, (21, 25));
+    @include cssLock("line-height", 360, $container, (24, 31));
 
-      padding-top: gutter(4);
+    padding-top: gutter(4);
+    padding-bottom: gutter(0.5);
+    font-weight: $bold;
+    color: $secondary;
+
+    &:nth-child(1) {
+      padding-top: 0;
+    }
+  }
+
+  h3 {
+    @include cssLock("font-size", 360, $container, (19, 22));
+    @include cssLock("line-height", 360, $container, (24, 28));
+
+    padding-top: gutter(2);
+    padding-bottom: 0;
+  }
+
+  p {
+    margin-bottom: gutter(1.8);
+    margin-top: gutter(1.8);
+  }
+
+  ul,
+  ol {
+    li {
       padding-bottom: gutter(0.5);
-      font-weight: $bold;
-      color: $secondary;
-
-      &:nth-child(1) {
-        padding-top: 0;
-      }
-    }
-
-    h3 {
-      @include cssLock("font-size", 360, $container, (19, 22));
-      @include cssLock("line-height", 360, $container, (24, 28));
-
-      padding-top: gutter(2);
-      padding-bottom: 0;
-    }
-
-    p {
-      margin-bottom: gutter(1.8);
-      margin-top: gutter(1.8);
-    }
-
-    ul,
-    ol {
-      li {
-        padding-bottom: gutter(0.5);
-        padding-top: gutter(0.5);
-      }
+      padding-top: gutter(0.5);
     }
   }
 }

@@ -1,0 +1,23 @@
+.wp-block-table {
+  margin: gutter(8) 0;
+
+  table,
+  .table {
+    border-collapse: collapse;
+  }
+
+  th {
+    padding: gutter(2) gutter(2.5);
+    text-align: left;
+    background-color: $primary;
+    color: $white;
+  }
+
+  tr {
+    border: 1px solid $primary;
+  }
+
+  td {
+    padding: gutter(2) gutter(2.5);
+  }
+}
