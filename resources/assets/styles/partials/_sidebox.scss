@@ -6,6 +6,15 @@
   &__content {
     width: 65%;
     padding: 0 gutter(4);
+
+    @include media("<=1400px") {
+      padding-left: 0;
+    }
+
+    @include media("<=1000px") {
+      width: 100%;
+      order: 2;
+    }
   }
 
   &__main {
@@ -15,6 +24,16 @@
     position: sticky;
     top: gutter(10);
     height: 100%;
+
+    @include media("<=1400px") {
+      padding: gutter(1.8) 0;
+    }
+
+    @include media("<=1000px") {
+      width: 100%;
+      order: 1;
+      position: initial;
+    }
   }
 
   &__box {

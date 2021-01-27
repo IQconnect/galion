@@ -27,7 +27,7 @@
               @endif
               @if($item['files'])
                 @foreach($item['files'] as $file)
-                  <a class="button button--dark text-img__button" href="{{ $file['file']['url'] }}">
+                  <a class="button button--dark text-img__button text-img__button--file" href="{{ $file['file']['url'] }}">
                     {{ $file['name'] }}
                   </a>
                 @endforeach

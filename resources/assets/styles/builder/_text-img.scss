@@ -11,6 +11,15 @@
   &__content {
     width: 50%;
     padding: gutter(10) gutter(6);
+
+    @include media("<1500px") {
+      width: 60%;
+    }
+
+    @include media("<1000px") {
+      width: 100%;
+      padding: gutter(2) 0;
+    }
   }
 
   &__subtitle {
@@ -28,14 +37,31 @@
 
   &__button {
     margin-right: gutter(1);
+    margin-bottom: gutter(1.5);
     padding: gutter(1.5) gutter(2);
     font-size: 14px;
+
+    &--file {
+      @include media("<1250px") {
+        display: none;
+      }
+    }
   }
 
   &__image {
     width: 50%;
     height: gutter(80);
     padding: gutter(5);
+
+    @include media("<1500px") {
+      width: 40%;
+    }
+
+    @include media("<1000px") {
+      width: 100%;
+      height: gutter(40);
+      padding: gutter(2) 0 gutter(4);
+    }
 
     img {
       width: 100%;

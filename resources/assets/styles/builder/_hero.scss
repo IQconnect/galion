@@ -29,9 +29,9 @@
     //max-width: gutter(60);
     z-index: 2;
 
-    @include media("<lg") {
-      margin: gutter(20) auto 0;
-    }
+    // @include media("<lg") {
+    //   margin: gutter(20) auto 0;
+    // }
   }
 
   &__title {
@@ -41,6 +41,14 @@
     font-size: 90px;
     font-weight: $regular;
     font-family: $font-title;
+
+    @include media("<lg") {
+      font-size: 70px;
+    }
+
+    @include media("<lg") {
+      font-size: 50px;
+    }
 
     &::after {
       content: "";
@@ -72,10 +80,27 @@
   &--small {
     min-height: gutter(60);
 
+    @include media("<lg") {
+      min-height: gutter(50);
+    }
+
+    @include media("<md") {
+      min-height: gutter(40);
+    }
+
     .hero__title {
       &::after {
         height: gutter(10);
         top: gutter(18);
+
+        @include media("<lg") {
+          top: gutter(15);
+        }
+
+        @include media("<md") {
+          top: gutter(12);
+          height: gutter(7);
+        }
       }
     }
   }
