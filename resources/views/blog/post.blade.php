@@ -1,7 +1,6 @@
-<section class="section">
+<section class="section section--content">
   <div class="container">
     <article class="text content-page" @php post_class() @endphp>
-      {!! do_shortcode('[flexy_breadcrumb]') !!}
       <h1 class="title">
         {{ get_the_title() }}
       </h1>

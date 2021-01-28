@@ -60,7 +60,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgba($secondary, 0.8);
+    background-color: rgba($secondary, 0.6);
     transition: $transition;
     opacity: 0;
   }
@@ -86,9 +86,15 @@
   }
 
   &__title {
-    padding-bottom: gutter(1.8);
-    font-size: 25px;
+    padding-top: gutter(1);
+    padding-bottom: gutter(1.5);
+    font-size: 28px;
     line-height: 30px;
     transition: $transition;
+    text-transform: initial;
+
+    &::after {
+      display: none;
+    }
   }
 }
